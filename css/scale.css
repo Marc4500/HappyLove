@@ -5,6 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
   margin: 0;
   overflow: hidden;
   background-image: url("../img/preview.jpg");
@@ -19,13 +20,11 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  /* background: linear-gradient(120deg, #ff7f50, #ff6347, #4682b4); */
+  height: 100vh;
   background-image: url("../img/preview.jpg");
-  /* background-size: 300% 300%; */
   background-size: cover;
   background-position: center;
-  animation: gradientAnimation 20s ease-in-out infinite;
+  animation: gradientAnimation 10s ease-in-out infinite;
   z-index: -2;
 }
 
@@ -70,9 +69,10 @@ mix-blend-mode: exclusion;
 }
 
 .container {
+  position: absolute;
   width: 100%;
   height: 100vh;
-  background-image: url("../img/background.png");
+  /* background-image: url("../img/background.png"); */
   background-size: cover;
   background-position: center;
 }
@@ -108,7 +108,7 @@ img {
 }
 
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 480px) {
   .text{
     font-size: 3rem;
     top: 35%;
@@ -119,16 +119,121 @@ img {
     0%{
       transform: scale(1);
     }
-    50%{
-      transform: scale(2);
-    }
     100%{
-      transform: scale(2.5);
+      transform: scale(2);
     }
   }
   
 }
-@media screen and (min-width: 720px) {
+@media ( min-width:480px) and (max-width:768px) {
+  .text{
+    font-size: 4rem;
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes spirlalGrow {
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(3);
+    }
+  }
+  
+}
+@media ( min-width:769px) and (max-width:1024px) {
+  .text{
+    font-size: 5rem;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes spirlalGrow {
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(2);
+    }
+  }
+  
+}
+@media ( min-width:1025px) and (max-width:1280px) {
+  .text{
+    font-size: 5rem;
+    top: 30%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes spirlalGrow {
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(3);
+    }
+  }
+  
+}
+@media ( min-width:1281px) and (max-width:1920px) {
+  .text{
+    font-size: 5rem;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes spirlalGrow {
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(3);
+    }
+  }
+  
+}
+
+
+
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fffafa;
+  border: 2px solid #ccc;
+  width: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; /* Cachée par défaut */
+  z-index: 1000;
+}
+
+#popup button{
+  margin-inline: 1rem;
+  padding: .5rem;
+  background-color: #ff9393;
+  border-radius: 10px;
+  color: aliceblue;
+}
+#popup button:hover{
+  background-color: #c4c4c4;
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Cachée par défaut */
+  z-index: 999;
+}
+
+/* @media screen and (min-width: 720px) {
   .text{
     font-size: 5rem;
     top: 30%;
@@ -203,4 +308,4 @@ img {
       transform: scale(3);
     }
   }
-}
+} */
