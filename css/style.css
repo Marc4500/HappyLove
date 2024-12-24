@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("/app/img/top-view-lots-pink-hearts.jpg");
+    background-position: center;
+    background-size: cover;
+    /* background: #ffe4e1; */
+}
+.container{ 
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+    margin-block: 15rem;
+    margin-inline: 2rem;
+}
+.index{
+    font-family: 'Dancing Script', cursive ;
+    color: #d72638;
+}
+button{
+    font-family:"lato", sans-serif;
+    padding: 1rem 2rem;
+    background: #ff6f61;
+    color: #ffe4e1;
+    font-size: 2rem;
+    border-radius: .8rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+}
+button:hover{
+    background: #d65c56;
+}
+/*-------------------------   REVEAL   -----------------------------*/
+.reveal{
+    font-size: 2.5rem;
+    font-family: 'great vibes', cursive;
+    color: #8b0000;
+}
+p{
+    font-size: 1.5rem;
+    color: #4a4a4a;
+}
+
+/*-------------------------   love   -----------------------------*/
+.love{
+    font-family: 'great vibes', cursive;
+    font-size: 3.5rem;
+    color: #d72638;
+}
+.btn{
+    font-family: 'great vibes';
+    font-size: .8rem;
+    margin: .1rem;
+    margin-block-start: 5rem;
+}
+.heart{
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    position: relative;
+    
+    left: 45%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    transform: rotate(45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart .6s linear infinite;
+}
+
+.heart::before{
+    content: '';
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    position: absolute;
+    top: -36px;
+    left: 0px;
+    border-radius: 50px;
+    transform: rotate(45deg);
+    box-shadow: -10px 10px 90px #f20044;
+}
+.heart::after{
+    content: '';
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    position: absolute;
+    right: 55%;
+    border-radius: 50px;
+    transform: rotate(45deg);
+    box-shadow: -10px 10px 90px #f20044;
+}
+@keyframes heart{
+    0%{
+        transform: rotate(45deg) scale(1.07)
+    }
+    80%{
+        transform: rotate(45deg) scale(1.00)
+    }
+    100%{
+        transform: rotate(45deg) scale(1.07)
+    }
+}
+
+
+@media screen and (max-width :520px) {
+    .index{
+        font-size: 3rem
+    }
+    button{
+        font-size: 25rem;
+        padding: .5rem .3rem;
+    }
+    .reveal{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    .love{
+        font-size: 3rem;
+    }
+    .btn{
+        font-size: .9rem;
+        margin: 1rem;
+        padding: .8rem .8rem;
+        margin-block-start: 5rem;
+    }
+}
+@media screen and (min-width :320px) {
+    .container{
+        margin-top: 5rem;
+    }
+    .index{
+        font-size: 3.5rem
+    }
+    button{
+        font-size: .8rem;
+        padding: 1rem 2rem;
+    }
+    .reveal{
+        font-size: 3.5rem;
+    }
+    p{
+        font-size: 2rem;
+    }
+    .love{
+        font-size: 3.5rem;
+    }
+    .btn{
+        font-size: 1rem;
+        font-weight: bolder;
+        margin: .3rem;
+        padding: .8rem .8rem;
+        margin-block-start: 3rem;
+    }
+    .heart{
+        height: 50px;
+        width: 50px;
+        background: #f20044;
+        position: relative;
+        left: 45%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform: rotate(45deg);
+        box-shadow: -10px 10px 90px #f20044;
+        animation: heart .6s linear infinite;
+    }
+    .heart::before{
+        content: '';
+        height: 50px;
+        width: 50px;
+        background: #f20044;
+        position: absolute;
+        top: -25px;
+        left: 0px;
+        border-radius: 50px;
+        transform: rotate(45deg);
+        box-shadow: -10px 10px 90px #f20044;
+    }
+    .heart::after{
+        content: '';
+        height: 50px;
+        width: 50px;
+        background: #f20044;
+        position: absolute;
+        right: 55%;
+        border-radius: 50px;
+        transform: rotate(45deg);
+        box-shadow: -10px 10px 90px #f20044;
+    }
+}
