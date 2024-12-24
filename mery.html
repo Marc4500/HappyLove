@@ -11,14 +11,26 @@
 
 <body>
     <div class="container">
+        <div id="overlay"></div>
+          <!-- Popup -->
+    <div id="popup">
+        <p>Voulez-vous lancer la musique ?</p>
+        <button id="yesButton">Oui</button>
+        <button id="noButton">Non</button>
+    </div>
 
         <img src="./img/background.png" alt="">
         <div class="text">Joyeux <br><span>Noël</span></div>
         <div id="snow"></div>
     </div>
 
+    <audio id="music" preload="auto">
+        <source src="./audio/christmasDream.mp3" type="audio/mp3">
+    </audio>
+
     <script src="./js/particles.min.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
